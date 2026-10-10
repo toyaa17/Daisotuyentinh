@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lý Thuyết & Đề Thi</title>
+    <link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+
+    <header>
+        <h1>LÝ THUYẾT & TÀI LIỆU ÔN THI</h1>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle-btn" title="Đổi giao diện Sáng/Tối">🌙</button>
+            <a href="index.html" class="back-btn">&#8592; Trang chủ</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="theory-layout">
+            
+            <!-- CỘT BÊN TRÁI: TRA CỨU CÔNG THỨC & CÔNG CỤ -->
+            <div class="theory-left-panel">
+                
+                <!-- Khung Đề Thi Các Năm (Google Drive Embed) -->
+                <div class="feature-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                        <h3 style="margin: 0;">📁 Kho Đề Thi Các Năm</h3>
+                        <a href="https://drive.google.com/drive/folders/1NdUQLf3eAZYB9LAUIAKQmEBO3qbM4qbh" 
+                           target="_blank" 
+                           style="font-size: 0.8rem; color: var(--primary-orange); font-weight: 700; text-decoration: none;">
+                            Mở Drive ↗
+                        </a>
+                    </div>
+                    <iframe 
+                        src="https://drive.google.com/embeddedfolderview?id=1NdUQLf3eAZYB9LAUIAKQmEBO3qbM4qbh#list" 
+                        style="width: 100%; height: 280px; border: 1.5px solid var(--border-color); border-radius: 8px;"
+                        frameborder="0">
+                    </iframe>
+                </div>
+
+                <!-- Bảng tra cứu công thức ĐẦY ĐỦ 5 CHƯƠNG -->
+                <div class="feature-card">
+                    <h3>📌 Tra Cứu Công Thức Trọng Tâm (Đầy Đủ)</h3>
+                    
+                    <!-- Chương 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Chương 1: Ma Trận & Định Thức <span>▼</span></button>
+                        <div class="accordion-content">
+                            <p><strong>1. Định thức cấp 2 & cấp 3:</strong></p>
+                            <div class="formula-box">det([[a, b], [c, d]]) = a.d - b.c</div>
+                            <p><strong>2. Tính chất định thức:</strong></p>
+                            <div class="formula-box">det(A.B) = det(A) * det(B)</div>
+                            <div class="formula-box">det(k.A) = kⁿ * det(A) (với A cấp n)</div>
+                            <div class="formula-box">det(Aᵀ) = det(A)</div>
+                            <div class="formula-box">det(A⁻¹) = 1 / det(A)</div>
+                            <p><strong>3. Ma trận nghịch đảo A⁻¹:</strong></p>
+                            <div class="formula-box">A⁻¹ = (1 / det(A)) * P_adj(A)</div>
+                            <p>*(Điều kiện tồn tại A⁻¹: det(A) ≠ 0)*</p>
+                        </div>
+                    </div>
+
+                    <!-- Chương 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Chương 2: Hệ Phương Trình Tuyến Tính <span>▼</span></button>
+                        <div class="accordion-content">
+                            <p><strong>1. Định lý Kronecker - Capelli:</strong></p>
+                            <p>• Có nghiệm <=> <code>r(A) = r(A|B)</code></p>
+                            <p>• Nghiệm duy nhất <=> <code>r(A) = r(A|B) = n</code> (n là số ẩn)</p>
+                            <p>• Vô số nghiệm <=> <code>r(A) = r(A|B) < n</code> (Phụ thuộc vào <code>n - r</code> tham số)</p>
+                            <p>• Vô nghiệm <=> <code>r(A) < r(A|B)</code></p>
+                            <p><strong>2. Quy tắc Cramer (Áp dụng khi A vuông & det(A) ≠ 0):</strong></p>
+                            <div class="formula-box">xᵢ = det(Aᵢ) / det(A)</div>
+                            <p><strong>3. Hệ phương trình thuần nhất (AX = 0):</strong></p>
+                            <p>• Luôn có nghiệm tầm thường <code>X = 0</code>.</p>
+                            <p>• Có nghiệm phi tầm thường (khác 0) <=> <code>det(A) = 0</code>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chương 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Chương 3: Không Gian Vectơ <span>▼</span></button>
+                        <div class="accordion-content">
+                            <p><strong>1. Độc lập tuyến tính & Phụ thuộc tuyến tính:</strong></p>
+                            <div class="formula-box">c₁v₁ + c₂v₂ + ... + cₖvₖ = 0</div>
+                            <p>• <em>ĐLTT:</em> Bắt buộc c₁ = c₂ = ... = cₖ = 0.</p>
+                            <p>• <em>PTTT:</em> Tồn tại ít nhất một cᵢ ≠ 0.</p>
+                            <p><strong>2. Cơ sở & Số chiều (Dimension):</strong></p>
+                            <p>• Tập B là <strong>Cơ sở</strong> của V <=> B vừa ĐLTT vừa là hệ sinh của V.</p>
+                            <p>• Số chiều <code>dim(Rⁿ) = n</code>.</p>
+                            <p>• Mọi hệ gồm k > n vectơ trong Rⁿ đều <strong>Phụ thuộc tuyến tính</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chương 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Chương 4: Giá Trị Riêng & Vectơ Riêng <span>▼</span></button>
+                        <div class="accordion-content">
+                            <p><strong>1. Định nghĩa & Phương trình đặc trưng:</strong></p>
+                            <div class="formula-box">A.v = λ.v (với v ≠ 0)</div>
+                            <div class="formula-box">det(A - λI) = 0</div>
+                            <p><strong>2. Tính chất của Giá trị riêng λ:</strong></p>
+                            <div class="formula-box">∑ λᵢ = Trace(A) (Tổng đường chéo)</div>
+                            <div class="formula-box">∏ λᵢ = det(A)</div>
+                            <p><strong>3. Điều kiện Chéo hóa ma trận A (cấp n):</strong></p>
+                            <p>• A chéo hóa được <=> A có đủ <strong>n vectơ riêng ĐLTT</strong>.</p>
+                            <p>• Nếu A có n giá trị riêng phân biệt => A <strong>chắc chắn chéo hóa được</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chương 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Chương 5: Ánh Xạ Tuyến Tính & Dạng Toàn Phương <span>▼</span></button>
+                        <div class="accordion-content">
+                            <p><strong>1. Ánh xạ tuyến tính f: V → W:</strong></p>
+                            <div class="formula-box">f(u + v) = f(u) + f(v)</div>
+                            <div class="formula-box">f(k.u) = k.f(u)</div>
+                            <p>• <strong>Ker(f):</strong> Hạch = {x ∈ V | f(x) = 0}</p>
+                            <p>• <strong>Im(f):</strong> Ảnh = {y ∈ W | ∃x ∈ V: f(x) = y}</p>
+                            <p>• Công thức chiều: <code>dim(Ker f) + dim(Im f) = dim(V)</code></p>
+                            <p><strong>2. Dạng toàn phương Q(x) & Tiêu chuẩn Sylvester:</strong></p>
+                            <p>• <em>Xác định dương:</em> Tất cả định thức con góc chính <code>Δ₁ > 0, Δ₂ > 0, ..., Δₙ > 0</code>.</p>
+                            <p>• <em>Xác định âm:</em> Các định thức con góc chính đổi dấu đan xen <code>Δ₁ < 0, Δ₂ > 0, Δ₃ < 0,...</code></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Máy tính Ma trận Tương tác -->
+                <div class="feature-card">
+                    <h3>🧮 Máy Tính Định Thức 2x2 Nhanh</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Nhập các số vào ma trận bên dưới để kiểm tra kết quả tức thì:</p>
+                    
+                    <div class="calc-matrix-grid">
+                        <input type="number" id="m11" class="matrix-input" value="1">
+                        <input type="number" id="m12" class="matrix-input" value="2">
+                        <input type="number" id="m21" class="matrix-input" value="3">
+                        <input type="number" id="m22" class="matrix-input" value="4">
+                    </div>
+
+                    <div class="calc-btn-group">
+                        <button id="btn-calc-det" class="btn-calc">Tính det(A)</button>
+                    </div>
+
+                    <div id="calc-result" class="calc-result"></div>
+                </div>
+
+            </div>
+
+            <!-- CỘT BÊN PHẢI: KHUNG ĐỌC PDF GIÁO TRÌNH -->
+            <div class="theory-right-panel">
+                <iframe class="pdf-container" src="https://thunhan.wordpress.com/wp-content/uploads/2008/08/dai_so_tuyen_tinh.pdf">
+                    Trình duyệt của bạn không hỗ trợ xem PDF trực tiếp. 
+                    <a href="https://thunhan.wordpress.com/wp-content/uploads/2008/08/dai_so_tuyen_tinh.pdf" target="_blank">Tải file PDF tại đây.</a>
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Accordion Toggle Gập/Mở
+            const accHeaders = document.querySelectorAll(".accordion-header");
+            accHeaders.forEach(header => {
+                header.addEventListener("click", () => {
+                    const content = header.nextElementSibling;
+                    content.classList.toggle("show");
+                });
+            });
+
+            // Máy tính Định thức 2x2
+            const calcBtn = document.getElementById("btn-calc-det");
+            const resultBox = document.getElementById("calc-result");
+
+            if (calcBtn) {
+                calcBtn.addEventListener("click", () => {
+                    const a = parseFloat(document.getElementById("m11").value) || 0;
+                    const b = parseFloat(document.getElementById("m12").value) || 0;
+                    const c = parseFloat(document.getElementById("m21").value) || 0;
+                    const d = parseFloat(document.getElementById("m22").value) || 0;
+
+                    const det = (a * d) - (b * c);
+                    
+                    resultBox.style.display = "block";
+                    resultBox.innerHTML = `det(A) = (${a} × ${d}) - (${b} × ${c}) = ${det}`;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

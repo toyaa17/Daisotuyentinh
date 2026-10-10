@@ -1,0 +1,938 @@
+[
+  {
+    "id": 1,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho ma trận A = [[1, 2], [3, 4]]. Tính định thức det(A)?",
+    "options": ["A. det(A) = 2", "B. det(A) = -2", "C. det(A) = 10", "D. det(A) = 0"],
+    "correctAnswer": 1,
+    "explanation": "Công thức tính định thức ma trận cấp 2: det(A) = ad - bc = 1*4 - 2*3 = 4 - 6 = -2."
+  },
+  {
+    "id": 2,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Ma trận vuông A được gọi là khả nghịch khi và chỉ khi:",
+    "options": ["A. det(A) = 0", "B. det(A) ≠ 0", "C. A là ma trận tam giác", "D. Mọi phần tử của A đều khác 0"],
+    "correctAnswer": 1,
+    "explanation": "Ma trận A tồn tại ma trận nghịch đảo A⁻¹ khi và chỉ khi định thức det(A) ≠ 0."
+  },
+  {
+    "id": 3,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho A là ma trận cấp 3x2 và B là ma trận cấp 2x4. Kích thước của ma trận tích A.B là:",
+    "options": ["A. 2x2", "B. 3x3", "C. 3x4", "D. Không nhân được"],
+    "correctAnswer": 2,
+    "explanation": "Phép nhân ma trận A(m x n) * B(n x p) cho kết quả ma trận C(m x p). Ở đây m=3, n=2, p=4 nên C có cấp 3x4."
+  },
+  {
+    "id": 4,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Tính chất nào sau đây KHÔNG ĐÚNG đối với phép nhân ma trận?",
+    "options": ["A. (A.B).C = A.(B.C)", "B. A.(B + C) = A.B + A.C", "C. A.B = B.A với mọi ma trận vuông A, B", "D. (k.A).B = k.(A.B)"],
+    "correctAnswer": 2,
+    "explanation": "Phép nhân ma trận không có tính chất giao hoán. Nhìn chung A.B ≠ B.A."
+  },
+  {
+    "id": 5,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho ma trận vuông A cấp n và k là một số thực. Khẳng định nào sau đây đúng?",
+    "options": ["A. det(k.A) = k.det(A)", "B. det(k.A) = kⁿ.det(A)", "C. det(k.A) = n.k.det(A)", "D. det(k.A) = det(A)"],
+    "correctAnswer": 1,
+    "explanation": "Khi nhân một số k với ma trận cấp n, tất cả n hàng đều được nhân k, do đó det(k.A) = kⁿ * det(A)."
+  },
+  {
+    "id": 6,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Vết của ma trận (Trace) là tổng các phần tử nằm trên:",
+    "options": ["A. Hàng đầu tiên", "B. Cột đầu tiên", "C. Đường chéo chính", "D. Đường chéo phụ"],
+    "correctAnswer": 2,
+    "explanation": "Trace(A) = a₁₁ + a₂₂ + ... + aₙₙ (Tổng phần tử trên đường chéo chính)."
+  },
+  {
+    "id": 7,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho ma trận A vuông cấp n có det(A) = 3. Tính det(A⁻¹)?",
+    "options": ["A. -3", "B. 3", "C. 1/3", "D. 0"],
+    "correctAnswer": 2,
+    "explanation": "Ta có det(A * A⁻¹) = det(I) = 1 => det(A⁻¹) = 1 / det(A) = 1/3."
+  },
+  {
+    "id": 8,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Ma trận A được gọi là ma trận đối xứng nếu:",
+    "options": ["A. A = Aᵀ", "B. A = -Aᵀ", "C. A.Aᵀ = I", "D. det(A) = 0"],
+    "correctAnswer": 0,
+    "explanation": "Ma trận đối xứng thỏa mãn A bằng chuyển vị của chính nó (A = Aᵀ)."
+  },
+  {
+    "id": 9,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho ma trận A = [[2, 0], [0, 5]]. Nhận xét nào đúng về A?",
+    "options": ["A. A là ma trận đơn vị", "B. A là ma trận đường chéo", "C. A không khả nghịch", "D. det(A) = 7"],
+    "correctAnswer": 1,
+    "explanation": "Ma trận có tất cả các phần tử nằm ngoài đường chéo chính bằng 0 là ma trận đường chéo."
+  },
+  {
+    "id": 10,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Nếu ma trận A có hai hàng giống hệt nhau thì định thức của A bằng:",
+    "options": ["A. 1", "B. -1", "C. 0", "D. Bằng tổng các phần tử"],
+    "correctAnswer": 2,
+    "explanation": "Theo tính chất định thức, ma trận có 2 hàng (hoặc 2 cột) tỉ lệ/giống nhau thì định thức bằng 0."
+  },
+  {
+    "id": 11,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Nếu đổi chỗ 2 hàng bất kỳ của ma trận vuông A thì định thức của ma trận mới sẽ:",
+    "options": ["A. Không đổi", "B. Tăng gấp đôi", "C. Đổi dấu", "D. Bằng 0"],
+    "correctAnswer": 2,
+    "explanation": "Đổi chỗ hai hàng (hoặc hai cột) bất kỳ của ma trận làm định thức đổi dấu."
+  },
+  {
+    "id": 12,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Tính định thức của ma trận tam giác trên A = [[2, 1, 3], [0, 4, 5], [0, 0, 3]]?",
+    "options": ["A. 24", "B. 9", "C. 0", "D. 12"],
+    "correctAnswer": 0,
+    "explanation": "Định thức của ma trận tam giác bằng tích các phần tử trên đường chéo chính: 2 * 4 * 3 = 24."
+  },
+  {
+    "id": 13,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Ma trận A cấp 3x3 có det(A) = 2. Tính det(2A)?",
+    "options": ["A. 4", "B. 8", "C. 16", "D. 12"],
+    "correctAnswer": 2,
+    "explanation": "Áp dụng công thức det(k.A) = kⁿ * det(A) với n=3, k=2: det(2A) = 2³ * 2 = 8 * 2 = 16."
+  },
+  {
+    "id": 14,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Phép biến đổi sơ cấp nào sau đây KHÔNG làm thay đổi định thức của ma trận?",
+    "options": [
+      "A. Nhân một hàng với số k ≠ 0",
+      "B. Đổi chỗ 2 hàng",
+      "C. Cộng vào một hàng một bội số của hàng khác",
+      "D. Chuyển vị ma trận"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Cộng vào một hàng một bội số của hàng khác không làm thay đổi giá trị của định thức."
+  },
+  {
+    "id": 15,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho A và B là hai ma trận vuông cùng cấp. Khẳng định nào đúng?",
+    "options": ["A. det(A + B) = det(A) + det(B)", "B. det(A.B) = det(A).det(B)", "C. det(A - B) = det(A) - det(B)", "D. det(A/B) = det(A)/det(B)"],
+    "correctAnswer": 1,
+    "explanation": "Định thức của một tích các ma trận bằng tích các định thức: det(A.B) = det(A) * det(B)."
+  },
+  {
+    "id": 16,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Hệ phương trình tuyến tính AX = B có nghiệm duy nhất khi và chỉ khi:",
+    "options": ["A. r(A) < r(A|B)", "B. r(A) = r(A|B) = số ẩn", "C. r(A) = r(A|B) < số ẩn", "D. r(A) ≠ r(A|B)"],
+    "correctAnswer": 1,
+    "explanation": "Theo định lý Kronecker-Capelli, hệ có nghiệm duy nhất khi r(A) = r(A|B) = n (với n là số ẩn)."
+  },
+  {
+    "id": 17,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Định lý Kronecker - Capelli phát biểu rằng hệ AX = B có nghiệm khi và chỉ khi:",
+    "options": ["A. r(A) = r(A|B)", "B. r(A) > r(A|B)", "C. det(A) ≠ 0", "D. A là ma trận vuông"],
+    "correctAnswer": 0,
+    "explanation": "Hệ phương trình tuyến tính có nghiệm khi và chỉ khi hạng ma trận hệ số bằng hạng ma trận mở rộng r(A) = r(A|B)."
+  },
+  {
+    "id": 18,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Hệ phương trình tuyến tính AX = B vô nghiệm khi:",
+    "options": ["A. r(A) = r(A|B)", "B. r(A) < r(A|B)", "C. det(A) ≠ 0", "D. B = 0"],
+    "correctAnswer": 1,
+    "explanation": "Khi r(A) < r(A|B), hệ phương trình bị mâu thuẫn và vô nghiệm."
+  },
+  {
+    "id": 19,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Hệ phương trình tuyến tính thuần nhất AX = 0 luôn luôn có ít nhất nghiệm nào?",
+    "options": ["A. Vô số nghiệm", "B. Nghiệm tầm thường (X = 0)", "C. Không có nghiệm nào", "D. Nghiệm X = 1"],
+    "correctAnswer": 1,
+    "explanation": "Thay X = (0, 0, ..., 0)ᵀ vào AX = 0 luôn đúng, do đó hệ thuần nhất luôn có nghiệm tầm thường."
+  },
+  {
+    "id": 20,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Hệ phương trình AX = 0 có nghiệm phi tầm thường khi và chỉ khi (với A vuông cấp n):",
+    "options": ["A. det(A) ≠ 0", "B. det(A) = 0", "C. r(A) = n", "D. A khả nghịch"],
+    "correctAnswer": 1,
+    "explanation": "Hệ thuần nhất vuông có nghiệm phi tầm thường khi r(A) < n <=> det(A) = 0."
+  },
+  {
+    "id": 21,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Phương pháp Cramer chỉ áp dụng được cho hệ phương trình AX = B khi:",
+    "options": [
+      "A. Số phương trình bằng số ẩn và det(A) ≠ 0",
+      "B. Số phương trình nhiều hơn số ẩn",
+      "C. det(A) = 0",
+      "D. B là ma trận không"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Quy tắc Cramer yêu cầu ma trận hệ số A phải là ma trận vuông và khả nghịch (det(A) ≠ 0)."
+  },
+  {
+    "id": 22,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Trong phương pháp Cramer, ẩn xᵢ được tính theo công thức:",
+    "options": ["A. xᵢ = det(A)/det(Aᵢ)", "B. xᵢ = det(Aᵢ)/det(A)", "C. xᵢ = det(Aᵢ).det(A)", "D. xᵢ = det(Aᵢ) - det(A)"],
+    "correctAnswer": 1,
+    "explanation": "Công thức Cramer: xᵢ = det(Aᵢ) / det(A), trong đó Aᵢ là ma trận A thay cột thứ i bằng cột hệ số tự do B."
+  },
+  {
+    "id": 23,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Hệ AX = B có vô số nghiệm phụ thuộc vào bao nhiêu tham số tự do? (n là số ẩn, r = r(A))",
+    "options": ["A. r tham số", "B. n tham số", "C. n - r tham số", "D. n + r tham số"],
+    "correctAnswer": 2,
+    "explanation": "Số tham số tự do trong họ nghiệm tổng quát bằng số ẩn trừ đi hạng của ma trận: k = n - r."
+  },
+  {
+    "id": 24,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Khái niệm 'Hạng của ma trận' (Rank) là:",
+    "options": [
+      "A. Số hàng của ma trận",
+      "B. Số cột của ma trận",
+      "C. Cấp cao nhất của định thức con khác 0",
+      "D. Tổng các phần tử trên đường chéo"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Hạng r(A) là cấp cao nhất của định thức con khác 0 được trích ra từ A."
+  },
+  {
+    "id": 25,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Nếu r(A) = 3 và r(A|B) = 4 thì hệ phương trình AX = B có trạng thái gì?",
+    "options": ["A. Có nghiệm duy nhất", "B. Vô nghiệm", "C. Có vô số nghiệm", "D. Có đúng 3 nghiệm"],
+    "correctAnswer": 1,
+    "explanation": "Do r(A) ≠ r(A|B) (3 ≠ 4) nên theo định lý Kronecker-Capelli, hệ phương trình vô nghiệm."
+  },
+  {
+    "id": 26,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Tập hợp các vectơ S = {v₁, v₂, ..., vₖ} gọi là độc lập tuyến tính nếu phương trình c₁v₁ + c₂v₂ + ... + cₖvₖ = 0:",
+    "options": [
+      "A. Chỉ có nghiệm c₁ = c₂ = ... = cₖ = 0",
+      "B. Có vô số nghiệm",
+      "C. Có ít nhất một cᵢ ≠ 0",
+      "D. Không có nghiệm"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Hệ ĐLTT khi tổ hợp tuyến tính bằng 0 bắt buộc tất cả hệ số cᵢ phải đồng thời bằng 0."
+  },
+  {
+    "id": 27,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Tập hợp S = {v₁, v₂, ..., vₖ} phụ thuộc tuyến tính khi và chỉ khi:",
+    "options": [
+      "A. Mọi cᵢ = 0",
+      "B. Tồn tại ít nhất một cᵢ ≠ 0 sao cho c₁v₁ + ... + cₖvₖ = 0",
+      "C. det của các vectơ bằng 1",
+      "D. Số vectơ k bằng chiều không gian"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hệ PTTT khi tồn tại một tổ hợp triệt tiêu với ít nhất một hệ số cᵢ ≠ 0."
+  },
+  {
+    "id": 28,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Số chiều (Dimension) của không gian vectơ Rⁿ là:",
+    "options": ["A. 1", "B. n - 1", "C. n", "D. 2ⁿ"],
+    "correctAnswer": 2,
+    "explanation": "Cơ sở chính chuẩn của Rⁿ có đúng n vectơ, do đó dim(Rⁿ) = n."
+  },
+  {
+    "id": 29,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Hệ vectơ gồm 3 vectơ trong R² luôn luôn:",
+    "options": ["A. Độc lập tuyến tính", "B. Phụ thuộc tuyến tính", "C. Là một cơ sở của R²", "D. Tạo thành một đường thẳng"],
+    "correctAnswer": 1,
+    "explanation": "Trong không gian m chiều, mọi hệ gồm k > m vectơ đều phụ thuộc tuyến tính (ở đây 3 > 2)."
+  },
+  {
+    "id": 30,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Tập hợp B là một Cơ sở (Basis) của không gian vectơ V nếu B:",
+    "options": [
+      "A. Chỉ độc lập tuyến tính",
+      "B. Chỉ là hệ sinh của V",
+      "C. Độc lập tuyến tính và là hệ sinh của V",
+      "D. Chứa vectơ không"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Theo định nghĩa, cơ sở là một hệ vừa độc lập tuyến tính vừa sinh ra không gian V."
+  },
+  {
+    "id": 31,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Trong không gian R³, cơ sở chính chuẩn gồm các vectơ nào?",
+    "options": [
+      "A. e₁=(1,0,0), e₂=(0,1,0), e₃=(0,0,1)",
+      "B. e₁=(1,1,1), e₂=(0,1,1), e₃=(0,0,1)",
+      "C. e₁=(1,0,0), e₂=(1,1,0), e₃=(1,1,1)",
+      "D. e₁=(0,0,0), e₂=(1,0,0), e₃=(0,1,0)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Các vectơ đơn vị có phần tử 1 tại vị trí thứ i và 0 ở các vị trí còn lại tạo thành cơ sở chính chuẩn."
+  },
+  {
+    "id": 32,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Nếu tập S chứa vectơ không (0) thì S luôn:",
+    "options": ["A. Độc lập tuyến tính", "B. Phụ thuộc tuyến tính", "C. Là cơ sở", "D. Có định thức bằng 1"],
+    "correctAnswer": 1,
+    "explanation": "Mọi tập hợp chứa vectơ 0 đều phụ thuộc tuyến tính vì c*0 = 0 với c ≠ 0 bất kỳ."
+  },
+  {
+    "id": 33,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Trong không gian R⁴, một hệ gồm 4 vectơ độc lập tuyến tính thì hệ đó:",
+    "options": ["A. Không sinh ra R⁴", "B. Là một cơ sở của R⁴", "C. Phụ thuộc tuyến tính", "D. Chỉ chứa các số dương"],
+    "correctAnswer": 1,
+    "explanation": "Trong không gian n chiều, một hệ gồm đúng n vectơ ĐLTT tự động trở thành cơ sở của không gian đó."
+  },
+  {
+    "id": 34,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Tọa độ của vectơ v = (3, 5) đối với cơ sở chính chuẩn trong R² là:",
+    "options": ["A. (5, 3)", "B. (3, 5)", "C. (8, 2)", "D. (15, 1)"],
+    "correctAnswer": 1,
+    "explanation": "v = 3*e₁ + 5*e₂ = 3*(1,0) + 5*(0,1) = (3, 5). Tọa độ giữ nguyên trên cơ sở chính chuẩn."
+  },
+  {
+    "id": 35,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Hạng của hệ vectơ {v₁, v₂, ..., vₖ} bằng:",
+    "options": [
+      "A. Tổng số vectơ k",
+      "B. Số vectơ độc lập tuyến tính tối đa trong hệ đó",
+      "C. Số chiều của Rⁿ",
+      "D. Luôn bằng 0"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hạng của một hệ vectơ chính là số lượng vectơ ĐLTT tối đa trích ra được từ hệ đó."
+  },
+  {
+    "id": 36,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Phương trình đặc trưng của ma trận A vuông cấp n dùng để tìm giá trị riêng là:",
+    "options": ["A. det(A) = 0", "B. det(A - λI) = 0", "C. (A - λI)X = 0", "D. A.X = λ"],
+    "correctAnswer": 1,
+    "explanation": "Nghiệm λ của phương trình đặc trưng det(A - λI) = 0 chính là các giá trị riêng của ma trận A."
+  },
+  {
+    "id": 37,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Vectơ v ≠ 0 gọi là vectơ riêng của ma trận A ứng với giá trị riêng λ nếu:",
+    "options": ["A. A.v = λ.v", "B. A.v = 0", "C. v.A = λ", "D. det(A - vI) = 0"],
+    "correctAnswer": 0,
+    "explanation": "Định nghĩa vectơ riêng: Tác động của ma trận A lên v tương đương nhân v với số thực λ (A.v = λ.v)."
+  },
+  {
+    "id": 38,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Giá trị riêng λ của ma trận A = [[3, 0], [0, 5]] là:",
+    "options": ["A. λ = 3 và λ = 5", "B. λ = 0 và λ = 8", "C. λ = 15", "D. λ = -3 và λ = -5"],
+    "correctAnswer": 0,
+    "explanation": "Ma trận đường chéo có các giá trị riêng chính là các phần tử nằm trên đường chéo chính."
+  },
+  {
+    "id": 39,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Tổng các giá trị riêng của ma trận vuông A bằng:",
+    "options": ["A. Định thức det(A)", "B. Vết của ma trận (Trace A)", "C. Hạng của ma trận", "D. 0"],
+    "correctAnswer": 1,
+    "explanation": "Theo tính chất đa thức đặc trưng: ∑ λᵢ = Trace(A) (Tổng phần tử đường chéo chính)."
+  },
+  {
+    "id": 40,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Tích các giá trị riêng của ma trận vuông A bằng:",
+    "options": ["A. Vết Trace(A)", "B. Định thức det(A)", "C. Cấp n của ma trận", "D. 1"],
+    "correctAnswer": 1,
+    "explanation": "Theo tính chất đa thức đặc trưng: ∏ λᵢ = det(A)."
+  },
+  {
+    "id": 41,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Ma trận vuông A cấp n chéo hóa được khi và chỉ khi A có:",
+    "options": [
+      "A. Đủ n vectơ riêng độc lập tuyến tính",
+      "B. det(A) ≠ 0",
+      "C. n phần tử khác 0",
+      "D. Tất cả giá trị riêng bằng 0"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Điều kiện cần và đủ để A chéo hóa được là tìm được n vectơ riêng ĐLTT tạo thành cơ sở cho Rⁿ."
+  },
+  {
+    "id": 42,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Nếu ma trận A có n giá trị riêng phân biệt thì A có chéo hóa được không?",
+    "options": ["A. Không thể biết", "B. Không chéo hóa được", "C. Luôn chéo hóa được", "D. Chỉ đúng khi n = 2"],
+    "correctAnswer": 2,
+    "explanation": "n giá trị riêng phân biệt luôn cho ra n vectơ riêng ĐLTT, do đó ma trận luôn chéo hóa được."
+  },
+  {
+    "id": 43,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Không gian con gồm tất cả các vectơ riêng ứng với giá trị riêng λ (kèm vectơ 0) gọi là:",
+    "options": ["A. Không gian sinh", "B. Không gian riêng (Eigenspace)", "C. Không gian hạch", "D. Cơ sở"],
+    "correctAnswer": 1,
+    "explanation": "Tập E(λ) = {v | (A - λI)v = 0} tạo thành không gian con gọi là không gian riêng ứng với λ."
+  },
+  {
+    "id": 44,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Cho ma trận A có giá trị riêng λ = 2. Giá trị riêng của ma trận A² là:",
+    "options": ["A. 2", "B. 4", "C. 8", "D. 1/2"],
+    "correctAnswer": 1,
+    "explanation": "Nếu A.v = λ.v thì A².v = A(A.v) = A(λ.v) = λ(A.v) = λ².v. Vậy giá trị riêng mới là 2² = 4."
+  },
+  {
+    "id": 45,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Nếu A khả nghịch và có giá trị riêng λ, thì ma trận A⁻¹ có giá trị riêng là:",
+    "options": ["A. λ", "B. -λ", "C. 1/λ", "D. λ²"],
+    "correctAnswer": 2,
+    "explanation": "Nhân 2 vế A.v = λ.v với A⁻¹ ta được A⁻¹.v = (1/λ).v. Do đó giá trị riêng của A⁻¹ là 1/λ."
+  },
+  {
+    "id": 46,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Ánh xạ f: V → W được gọi là tuyến tính nếu thỏa mãn tính chất nào với mọi u, v ∈ V và k ∈ R?",
+    "options": [
+      "A. f(u + v) = f(u) + f(v) và f(k.u) = k.f(u)",
+      "B. f(u.v) = f(u).f(v)",
+      "C. f(u - v) = 0",
+      "D. f(u) = u + k"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Hai điều kiện định nghĩa ánh xạ tuyến tính: bảo toàn phép cộng vectơ và bảo toàn phép nhân với số thực."
+  },
+  {
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "id": 47,
+    "question": "Hạch của ánh xạ tuyến tính Ker(f) là tập hợp các vectơ x ∈ V sao cho:",
+    "options": ["A. f(x) = x", "B. f(x) = 0", "C. f(x) ≠ 0", "D. x = 0"],
+    "correctAnswer": 1,
+    "explanation": "Hạch Ker(f) chứa tất cả các vectơ trong không gian nguồn V bị ánh xạ biến thành vectơ 0 trong W."
+  },
+  {
+    "id": 48,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Ảnh của ánh xạ tuyến tính Im(f) là tập hợp các vectơ y ∈ W sao cho:",
+    "options": ["A. y = 0", "B. Tồn tại x ∈ V để f(x) = y", "C. f(y) = 0", "D. y không thuộc W"],
+    "correctAnswer": 1,
+    "explanation": "Ảnh Im(f) là tập hợp các giá trị y thu được trong không gian đích W khi x biến thiên trong V."
+  },
+  {
+    "id": 49,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Dạng toàn phương Q(x₁, x₂) = 2x₁² + 5x₂² là dạng toàn phương:",
+    "options": ["A. Xác định dương", "B. Xác định âm", "C. Không xác định", "D. Bằng 0"],
+    "correctAnswer": 0,
+    "explanation": "Vì các hệ số 2 > 0 và 5 > 0, Q(x) luôn > 0 với mọi x ≠ (0,0) nên Q là dạng toàn phương xác định dương."
+  },
+  {
+    "id": 50,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Theo tiêu chuẩn Sylvester, dạng toàn phương xác định dương khi và chỉ khi tất cả các định thức con góc chính:",
+    "options": ["A. Đều âm", "B. Đều bằng 0", "C. Đều dương", "D. Dấu xen kẽ"],
+    "correctAnswer": 2,
+    "explanation": "Tiêu chuẩn Sylvester: Q xác định dương <=> Δ₁ > 0, Δ₂ > 0, ..., Δₙ > 0 (Tất cả định thức con góc chính đều dương)."
+  },
+  
+  {
+    "id": 51,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Ma trận vuông A cấp n được gọi là ma trận trực giao nếu thỏa mãn điều kiện nào?",
+    "options": ["A. A = Aᵀ", "B. A.Aᵀ = I", "C. det(A) = 0", "D. A² = A"],
+    "correctAnswer": 1,
+    "explanation": "Ma trận trực giao thỏa mãn tích với ma trận chuyển vị của nó bằng ma trận đơn vị: A.Aᵀ = Aᵀ.A = I (tương đương A⁻¹ = Aᵀ)."
+  },
+  {
+    "id": 52,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho ma trận A cấp 2x3 và B cấp 3x2. Phát biểu nào sau đây đúng?",
+    "options": [
+      "A. Phép nhân A.B và B.A đều thực hiện được và cùng cấp",
+      "B. Phép nhân A.B cho ma trận cấp 2x2, B.A cho ma trận cấp 3x3",
+      "C. Không thể nhân A với B",
+      "D. A.B = B.A"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A(2x3) * B(3x2) cho kết quả cấp 2x2. B(3x2) * A(2x3) cho kết quả cấp 3x3."
+  },
+  {
+    "id": 53,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Định thức của ma trận đơn vị Iₙ cấp n bằng:",
+    "options": ["A. 0", "B. n", "C. 1", "D. n!"],
+    "correctAnswer": 2,
+    "explanation": "Ma trận đơn vị là ma trận đường chéo có các phần tử trên đường chéo chính bằng 1, do đó det(Iₙ) = 1*1*...*1 = 1."
+  },
+  {
+    "id": 54,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho A là ma trận vuông cấp 3 có det(A) = -2. Tính định thức det(A³)?",
+    "options": ["A. -6", "B. -8", "C. 8", "D. 6"],
+    "correctAnswer": 1,
+    "explanation": "Áp dụng tính chất det(Aᵏ) = (det(A))ᵏ => det(A³) = (-2)³ = -8."
+  },
+  {
+    "id": 55,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Nếu ma trận B nhận được từ ma trận A bằng cách nhân một hàng của A với số k ≠ 0 thì:",
+    "options": ["A. det(B) = det(A)", "B. det(B) = k.det(A)", "C. det(B) = kⁿ.det(A)", "D. det(B) = det(A) + k"],
+    "correctAnswer": 1,
+    "explanation": "Nhân một hàng (hoặc cột) của ma trận với k sẽ làm giá trị định thức tăng lên k lần."
+  },
+  {
+    "id": 56,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Ma trận phụ hợp (Adjunct matrix) P_adj(A) của ma trận A vuông khả nghịch thỏa mãn công thức nghịch đảo nào?",
+    "options": ["A. A⁻¹ = det(A) * P_adj(A)", "B. A⁻¹ = (1 / det(A)) * P_adj(A)", "C. A⁻¹ = P_adj(A)", "D. A⁻¹ = (det(A))² * P_adj(A)"],
+    "correctAnswer": 1,
+    "explanation": "Công thức ma trận nghịch đảo qua ma trận phụ hợp: A⁻¹ = (1 / det(A)) * P_adj(A)."
+  },
+  {
+    "id": 57,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Cho ma trận A = [[1, 3], [0, 1]]. Tính ma trận A²?",
+    "options": ["A. [[1, 6], [0, 1]]", "B. [[1, 9], [0, 1]]", "C. [[1, 3], [0, 1]]", "D. [[2, 6], [0, 2]]"],
+    "correctAnswer": 0,
+    "explanation": "Thực hiện phép nhân ma trận A * A: Hàng 1 cột 2 bằng 1*3 + 3*1 = 6. Kết quả là [[1, 6], [0, 1]]."
+  },
+  {
+    "id": 58,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Khẳng định nào sau đây về ma trận chuyển vị Aᵀ là SAI?",
+    "options": ["A. (Aᵀ)ᵀ = A", "B. (A + B)ᵀ = Aᵀ + Bᵀ", "C. (A.B)ᵀ = Aᵀ.Bᵀ", "D. (k.A)ᵀ = k.Aᵀ"],
+    "correctAnswer": 2,
+    "explanation": "Chuyển vị của một tích bị đảo ngược thứ tự: (A.B)ᵀ = Bᵀ.Aᵀ."
+  },
+  {
+    "id": 59,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Ma trận Lũy linh (Nilpotent) là ma trận vuông A thỏa mãn:",
+    "options": ["A. Tồn tại số nguyên dương k sao cho Aᵏ = 0", "B. A² = I", "C. Aᵀ = A", "D. det(A) = 1"],
+    "correctAnswer": 0,
+    "explanation": "Định nghĩa ma trận lũy linh: Tồn tại k sao cho lũy thừa Aᵏ biến thành ma trận không."
+  },
+  {
+    "id": 60,
+    "category": "Chương 1: Ma trận & Định thức",
+    "question": "Hạng của ma trận không O_m,n bằng bao nhiêu?",
+    "options": ["A. m", "B. n", "C. 1", "D. 0"],
+    "correctAnswer": 3,
+    "explanation": "Ma trận không chứa toàn số 0 nên không có định thức con nào khác 0, do đó r(O) = 0."
+  },
+  {
+    "id": 61,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Trong phương pháp khử Gauss, các phép biến đổi sơ cấp được thực hiện trên:",
+    "options": ["A. Chỉ trên các cột", "B. Các hàng của ma trận mở rộng (A|B)", "C. Chỉ ma trận hệ số tự do B", "D. Đường chéo phụ"],
+    "correctAnswer": 1,
+    "explanation": "Khử Gauss áp dụng phép biến đổi sơ cấp theo hàng trên ma trận mở rộng (A|B) để đưa về dạng bậc thang."
+  },
+  {
+    "id": 62,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Hệ phương trình AX = B gồm 3 phương trình 4 ẩn. Kết luận nào chắc chắn ĐÚNG?",
+    "options": [
+      "A. Hệ luôn luôn vô nghiệm",
+      "B. Hệ có nghiệm duy nhất",
+      "C. Hệ không thể có nghiệm duy nhất",
+      "D. Hệ luôn có vô số nghiệm"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Vì số ẩn (n=4) > số phương trình (m=3) nên hạng r(A) ≤ 3 < 4. Do đó hệ không bao giờ có nghiệm duy nhất (chỉ có thể vô nghiệm hoặc vô số nghiệm)."
+  },
+  {
+    "id": 63,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Nghiệm tổng quát của hệ phương trình tuyến tính vô số nghiệm được biểu diễn dưới dạng:",
+    "options": [
+      "A. Một điểm duy nhất",
+      "B. Nghiệm riêng + Nghiệm tổng quát của hệ thuần nhất tương ứng",
+      "C. Tích của các ma trận hệ số",
+      "D. Định thức Cramer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cấu trúc họ nghiệm của hệ AX = B: X = X_riêng + X_thuần_nhất."
+  },
+  {
+    "id": 64,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Nếu r(A) = r(A|B) = 3 trong hệ phương trình có 5 ẩn thì họ nghiệm phụ thuộc vào bao nhiêu tham số tự do?",
+    "options": ["A. 3 tham số", "B. 5 tham số", "C. 2 tham số", "D. 8 tham số"],
+    "correctAnswer": 2,
+    "explanation": "Số tham số tự do k = n - r = 5 - 3 = 2 tham số."
+  },
+  {
+    "id": 65,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Cho ma trận A cấp 4x4 có det(A) = 5. Hệ phương trình AX = 0 có bao nhiêu nghiệm?",
+    "options": ["A. Vô số nghiệm", "B. Duy nhất nghiệm tầm thường X = 0", "C. 5 nghiệm", "D. Vô nghiệm"],
+    "correctAnswer": 1,
+    "explanation": "Vì det(A) ≠ 0 nên ma trận A khả nghịch, hệ thuần nhất chỉ có nghiệm duy nhất X = A⁻¹.0 = 0."
+  },
+  {
+    "id": 66,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Khi biến đổi ma trận mở rộng (A|B) về dạng bậc thang thu được hàng [0 0 0 | 5] thì hệ phương trình:",
+    "options": ["A. Có nghiệm duy nhất x = 5", "B. Vô nghiệm", "C. Có vô số nghiệm phụ thuộc 5 tham số", "D. Có nghiệm x = 0"],
+    "correctAnswer": 1,
+    "explanation": "Hàng [0 0 0 | 5] tương ứng với phương trình mâu thuẫn: 0x₁ + 0x₂ + 0x₃ = 5 (Vô lý) => Hệ vô nghiệm."
+  },
+  {
+    "id": 67,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Ma trận bậc thang theo hàng có tính chất nào?",
+    "options": [
+      "A. Hàng bằng 0 luôn nằm dưới các hàng khác 0",
+      "B. Phần tử cơ sở của hàng dưới nằm bên trái phần tử cơ sở hàng trên",
+      "C. Mọi phần tử đều bằng 1",
+      "D. Tất cả đường chéo phụ bằng 0"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Theo định nghĩa ma trận bậc thang, các hàng toàn số 0 bắt buộc phải nằm ở dưới cùng."
+  },
+  {
+    "id": 68,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Cho hệ phương trình AX = B. Nếu A là ma trận vuông và det(A) ≠ 0, nghiệm được tính qua ma trận nghịch đảo là:",
+    "options": ["A. X = B.A⁻¹", "B. X = A⁻¹.B", "C. X = det(A).B", "D. X = A.B⁻¹"],
+    "correctAnswer": 1,
+    "explanation": "Nhân trái hai vế của AX = B với A⁻¹ thu được: A⁻¹(AX) = A⁻¹B => I.X = A⁻¹B => X = A⁻¹B."
+  },
+  {
+    "id": 69,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Bản chất của phép khử Gauss - Jordan là đưa ma trận mở rộng về dạng nào?",
+    "options": ["A. Ma trận tam giác trên", "B. Ma trận bậc thang rút gọn (RREF)", "C. Ma trận đối xứng", "D. Ma trận đơn vị"],
+    "correctAnswer": 1,
+    "explanation": "Phương pháp Gauss-Jordan tiến xa hơn Gauss bằng cách biến đổi tiếp về dạng bậc thang rút gọn (Reduced Row Echelon Form)."
+  },
+  {
+    "id": 70,
+    "category": "Chương 2: Hệ phương trình tuyến tính",
+    "question": "Nếu thêm một cột vào ma trận A để tạo thành ma trận mở rộng (A|B) thì hạng r(A|B) so với r(A) như thế nào?",
+    "options": [
+      "A. r(A|B) luôn nhỏ hơn r(A)",
+      "B. r(A|B) = r(A) hoặc r(A|B) = r(A) + 1",
+      "C. r(A|B) luôn gấp đôi r(A)",
+      "D. r(A|B) = r(A) + 2"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Thêm một cột chỉ có thể giữ nguyên hạng hoặc làm hạng tăng thêm tối đa 1 đơn vị."
+  },
+  {
+    "id": 71,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Vectơ không (0) trong không gian vectơ V có tính chất nào đối với mọi u ∈ V?",
+    "options": ["A. u + 0 = u", "B. u + 0 = 0", "C. u . 0 = u", "D. 0 / u = 1"],
+    "correctAnswer": 0,
+    "explanation": "Vectơ 0 là phần tử trung hòa đối với phép cộng vectơ: u + 0 = 0 + u = u."
+  },
+  {
+    "id": 72,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Một tập con W của không gian vectơ V được gọi là Không gian con (Subspace) nếu W thỏa mãn:",
+    "options": [
+      "A. Chứa vectơ 0 và đóng kín đối với phép cộng vectơ & phép nhân với số thực",
+      "B. Chỉ cần chứa đúng 1 vectơ",
+      "C. Có số phần tử bằng V",
+      "D. Chứa tất cả các số nguyên"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Điều kiện không gian con: 0 ∈ W, u+v ∈ W (với u,v ∈ W), và k.u ∈ W (với k ∈ R)."
+  },
+  {
+    "id": 73,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Cho hai không gian con U và V của W. Tập hợp nào sau đây KHÔNG CHẮC CẮN là không gian con của W?",
+    "options": ["A. U ∩ V (Giao)", "B. U + V (Tổng)", "C. U ∪ V (Hợp)", "D. Tập {0}"],
+    "correctAnswer": 2,
+    "explanation": "Hợp của hai không gian con U ∪ V nhìn chung không phải là không gian con (trừ khi U ⊆ V hoặc V ⊆ U)."
+  },
+  {
+    "id": 74,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Số chiều của không gian con các ma trận vuông cấp 2 x 2 đối xứng là:",
+    "options": ["A. 4", "B. 3", "C. 2", "D. 1"],
+    "correctAnswer": 1,
+    "explanation": "Ma trận đối xứng 2x2 có dạng [[a, b], [b, c]] được xác định tự do bởi 3 tham số a, b, c. Vậy dim = 3."
+  },
+  {
+    "id": 75,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Số chiều của không gian các đa thức có bậc không quá 3 (Ký hiệu P₃[x]) là:",
+    "options": ["A. 3", "B. 4", "C. 2", "D. Vô hạn"],
+    "correctAnswer": 1,
+    "explanation": "Đa thức P₃[x] có dạng a₀ + a₁x + a₂x² + a₃x³, cơ sở chính chuẩn gồm {1, x, x², x³} gồm 4 phần tử => dim = 4."
+  },
+  {
+    "id": 76,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Chuyển cơ sở từ B sang B' được thực hiện thông qua ma trận chuyển cơ sở P. Công thức đổi tọa độ là:",
+    "options": ["A. [v]_B = P * [v]_B'", "B. [v]_B' = P * [v]_B", "C. [v]_B = P⁻¹ * [v]_B'", "D. [v]_B' = Pᵀ * [v]_B"],
+    "correctAnswer": 0,
+    "explanation": "Công thức đổi tọa độ: Tọa độ trên cơ sở cũ bằng ma trận chuyển P nhân với tọa độ trên cơ sở mới [v]_B = P.[v]_B'."
+  },
+  {
+    "id": 77,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Nếu hệ vectơ S = {v₁, v₂} độc lập tuyến tính thì hệ S' = {v₁, v₂, v₁ + v₂} sẽ:",
+    "options": ["A. Độc lập tuyến tính", "B. Phụ thuộc tuyến tính", "C. Là cơ sở của R³", "D. Chứa vectơ không"],
+    "correctAnswer": 1,
+    "explanation": "Vectơ thứ ba v₃ = v₁ + v₂ là tổ hợp tuyến tính của 2 vectơ đầu, do đó hệ S' bị phụ thuộc tuyến tính."
+  },
+  {
+    "id": 78,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Trong không gian Euclid Rⁿ, tích vô hướng của hai vectơ u = (u₁, u₂) và v = (v₁, v₂) chuẩn là:",
+    "options": ["A. <u, v> = u₁v₁ + u₂v₂", "B. <u, v> = u₁v₂ - u₂v₁", "C. <u, v> = u₁ + v₁", "D. <u, v> = u₁v₁ . u₂v₂"],
+    "correctAnswer": 0,
+    "explanation": "Định nghĩa tích vô hướng chính chuẩn trong R²: <u, v> = u₁v₁ + u₂v₂."
+  },
+  {
+    "id": 79,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Độ dài (Chuẩn - Norm) của vectơ v = (3, 4) trong R² là:",
+    "options": ["A. 7", "B. 12", "C. 5", "D. 25"],
+    "correctAnswer": 2,
+    "explanation": "Chuẩn ||v|| = √(3² + 4²) = √(9 + 16) = √25 = 5."
+  },
+  {
+    "id": 80,
+    "category": "Chương 3: Không gian Vectơ",
+    "question": "Hai vectơ u và v gọi là Vuông góc (Trực giao) với nhau khi và chỉ khi:",
+    "options": ["A. u + v = 0", "B. Tích vô hướng <u, v> = 0", "C. ||u|| = ||v||", "D. u = k.v"],
+    "correctAnswer": 1,
+    "explanation": "Định nghĩa hai vectơ trực giao trong không gian tích vô hướng: <u, v> = 0."
+  },
+  {
+    "id": 81,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Cho ma trận A = [[1, 2], [0, 4]]. Các giá trị riêng của A là:",
+    "options": ["A. λ = 1 và λ = 4", "B. λ = 2 và λ = 0", "C. λ = 3 và λ = 5", "D. λ = -1 và λ = -4"],
+    "correctAnswer": 0,
+    "explanation": "Ma trận tam giác trên có các giá trị riêng nằm ngay trên đường chéo chính: λ₁ = 1, λ₂ = 4."
+  },
+  {
+    "id": 82,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Đa thức đặc trưng P(λ) của ma trận A cấp 2x2 dạng P(λ) = det(A - λI) có dạng mở rộng là:",
+    "options": [
+      "A. λ² - Trace(A).λ + det(A)",
+      "B. λ² + Trace(A).λ - det(A)",
+      "C. λ² - det(A).λ + Trace(A)",
+      "D. λ² + det(A)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đa thức đặc trưng ma trận cấp 2: P(λ) = λ² - (a + d)λ + (ad - bc) = λ² - Trace(A)λ + det(A)."
+  },
+  {
+    "id": 83,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Định lý Cayley - Hamilton phát biểu rằng:",
+    "options": [
+      "A. Mọi ma trận vuông đều thỏa mãn phương trình đặc trưng của chính nó P(A) = 0",
+      "B. Mọi ma trận đều có định thức bằng 1",
+      "C. Giá trị riêng luôn là số dương",
+      "D. A luôn luôn chéo hóa được"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Nội dung định lý Cayley-Hamilton: Nếu P(λ) là đa thức đặc trưng của A thì P(A) = O (ma trận không)."
+  },
+  {
+    "id": 84,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Nếu ma trận A đồng dạng với ma trận B (A = P.B.P⁻¹) thì A và B có chung tính chất nào?",
+    "options": [
+      "A. Cùng định thức, cùng vết và cùng đa thức đặc trưng",
+      "B. Cùng ma trận chuyển vị",
+      "C. Cùng tập hợp các phần tử",
+      "D. Luôn là ma trận đường chéo"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Hai ma trận đồng dạng bảo toàn định thức, vết, đa thức đặc trưng và các giá trị riêng."
+  },
+  {
+    "id": 85,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Khi chéo hóa ma trận A = P.D.P⁻¹, ma trận đường chéo D chứa cái gì trên đường chéo chính?",
+    "options": [
+      "A. Các giá trị riêng của A",
+      "B. Các phần tử của ma trận đơn vị",
+      "C. Định thức của A",
+      "D. Tọa độ các vectơ riêng"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Trong phép chéo hóa A = P.D.P⁻¹, các phần tử trên đường chéo chính của D chính là các giá trị riêng λᵢ của A."
+  },
+  {
+    "id": 86,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Khi chéo hóa ma trận A = P.D.P⁻¹, các cột của ma trận P là:",
+    "options": [
+      "A. Các vectơ riêng ĐLTT tương ứng với các giá trị riêng trong D",
+      "B. Các hàng của ma trận A",
+      "C. Các phần tử tự do",
+      "D. Vectơ không"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Ma trận làm chéo P được cấu tạo bằng cách xếp các vectơ riêng ĐLTT của A thành các cột."
+  },
+  {
+    "id": 87,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Ma trận thực đối xứng A (A = Aᵀ) có đặc điểm nổi bật nào về chéo hóa?",
+    "options": [
+      "A. Luôn chéo hóa được bằng ma trận trực giao",
+      "B. Không bao giờ chéo hóa được",
+      "C. Chỉ có giá trị riêng bằng 0",
+      "D. Có det(A) luôn âm"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Định lý chéo hóa trực giao: Mọi ma trận thực đối xứng đều chéo hóa trực giao được (tồn tại P trực giao sao cho PᵀAP = D)."
+  },
+  {
+    "id": 88,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Cho ma trận A có các giá trị riêng λ₁ = 1, λ₂ = 3. Tính det(A) đối với ma trận cấp 2 này?",
+    "options": ["A. 4", "B. 3", "C. 1/3", "D. 0"],
+    "correctAnswer": 1,
+    "explanation": "Tích các giá trị riêng bằng định thức: det(A) = λ₁ * λ₂ = 1 * 3 = 3."
+  },
+  {
+    "id": 89,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Bội đại số của giá trị riêng λ là:",
+    "options": [
+      "A. Số lần xuất hiện của nghiệm λ trong đa thức đặc trưng",
+      "B. Số chiều của không gian riêng E(λ)",
+      "C. Tổng các phần tử đường chéo",
+      "D. Giá trị det(A)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bội đại số là số lần lặp của nghiệm λ khi giải phương trình đặc trưng det(A - λI) = 0."
+  },
+  {
+    "id": 90,
+    "category": "Chương 4: Giá trị riêng & Vectơ riêng",
+    "question": "Bội hình học của giá trị riêng λ là:",
+    "options": [
+      "A. Số chiều của không gian riêng E(λ) = dim(Ker(A - λI))",
+      "B. Bội nghiệm trong đa thức đặc trưng",
+      "C. Cấp n của ma trận A",
+      "D. Số hàng khác 0"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bội hình học chính là số lượng vectơ riêng ĐLTT tối đa ứng với λ, bằng dim(E(λ))."
+  },
+  {
+    "id": 91,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Cho ánh xạ tuyến tính f: R² → R² định bởi f(x₁, x₂) = (2x₁, 3x₂). Ma trận biểu diễn f trên cơ sở chính chuẩn là:",
+    "options": ["A. [[2, 0], [0, 3]]", "B. [[2, 3], [0, 0]]", "C. [[0, 2], [3, 0]]", "D. [[1, 0], [0, 1]]"],
+    "correctAnswer": 0,
+    "explanation": "f(e₁) = f(1,0) = (2,0); f(e₂) = f(0,1) = (0,3). Xếp thành các cột ta được ma trận [[2, 0], [0, 3]]."
+  },
+  {
+    "id": 92,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Ánh xạ tuyến tính f: V → W là một Đơn ánh (Injection) khi và chỉ khi:",
+    "options": ["A. Ker(f) = {0}", "B. Im(f) = W", "C. dim(V) > dim(W)", "D. det(A) = 0"],
+    "correctAnswer": 0,
+    "explanation": "Ánh xạ tuyến tính là đơn ánh <=> Hạch Ker(f) chỉ chứa duy nhất vectơ không {0} (tương đương dim Ker f = 0)."
+  },
+  {
+    "id": 93,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Ánh xạ tuyến tính f: V → W là một Toàn ánh (Surjection) khi và chỉ khi:",
+    "options": ["A. Im(f) = W (hoặc dim(Im f) = dim W)", "B. Ker(f) = {0}", "C. dim(V) < dim(W)", "D. f(0) = 1"],
+    "correctAnswer": 0,
+    "explanation": "Ánh xạ là toàn ánh khi tập ảnh Im(f) phủ kín toàn bộ không gian đích W."
+  },
+  {
+    "id": 94,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Ánh xạ tuyến tính vừa là đơn ánh vừa là toàn ánh thì gọi là:",
+    "options": ["A. Đẳng ánh (Đẳng cấu / Isomorphism)", "B. Dạng toàn phương", "C. Ma trận nghịch đảo", "D. Vectơ riêng"],
+    "correctAnswer": 0,
+    "explanation": "Một ánh xạ tuyến tính song ánh (vừa đơn ánh vừa toàn ánh) được gọi là một Đẳng cấu tuyến tính."
+  },
+  {
+    "id": 95,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Dạng toàn phương Q(x₁, x₂) = -3x₁² - 4x₂² là dạng toàn phương:",
+    "options": ["A. Xác định âm", "B. Xác định dương", "C. Bán xác định dương", "D. Không xác định"],
+    "correctAnswer": 0,
+    "explanation": "Vì các hệ số bậc hai đều âm (-3 < 0, -4 < 0), Q(x) < 0 với mọi x ≠ 0 nên Q là dạng toàn phương xác định âm."
+  },
+  {
+    "id": 96,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Ma trận A của dạng toàn phương Q(x₁, x₂) = 2x₁² + 6x₁x₂ + 5x₂² là:",
+    "options": ["A. [[2, 3], [3, 5]]", "B. [[2, 6], [6, 5]]", "C. [[2, 0], [0, 5]]", "D. [[3, 2], [5, 3]]"],
+    "correctAnswer": 0,
+    "explanation": "Phần tử đường chéo a₁₁=2, a₂₂=5. Phần tử chéo phụ a₁₂ = a₂₁ = 6/2 = 3. Vậy ma trận là [[2, 3], [3, 5]]."
+  },
+  {
+    "id": 97,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Theo phương pháp Lagrange, mục tiêu của việc biến đổi dạng toàn phương là đưa Q(x) về dạng nào?",
+    "options": [
+      "A. Dạng chính chuẩn (Chỉ còn các bình phương)",
+      "B. Dạng tam giác",
+      "C. Dạng định thức",
+      "D. Ma trận đơn vị"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Phương pháp Lagrange dùng biến đổi bình phương hoàn chỉnh để đưa dạng toàn phương về dạng chính chuẩn Q = y₁² + y₂² + ... + yᵣ²."
+  },
+  {
+    "id": 98,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Định lý Quán tính Jacobi phát biểu rằng số hệ số dương và số hệ số âm trong dạng chính chuẩn của dạng toàn phương:",
+    "options": [
+      "A. Là các số bất biến (không phụ thuộc vào phương pháp biến đổi)",
+      "B. Thay đổi tùy theo cách chọn cơ sở",
+      "C. Luôn bằng nhau",
+      "D. Luôn bằng 0"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Định lý quán tính khẳng định chỉ số tích cực (số hệ số dương) và chỉ số tiêu cực (số hệ số âm) là các đại lượng đặc trưng bất biến."
+  },
+  {
+    "id": 99,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Dạng toàn phương Q có ma trận A. Nếu tất cả các giá trị riêng của A đều dương thì Q là dạng:",
+    "options": ["A. Xác định dương", "B. Xác định âm", "C. Không xác định", "D. Bằng 0"],
+    "correctAnswer": 0,
+    "explanation": "Mối liên hệ giá trị riêng: Tất cả λᵢ > 0 <=> Dạng toàn phương xác định dương."
+  },
+  {
+    "id": 100,
+    "category": "Chương 5: Ánh xạ tuyến tính & Dạng toàn phương",
+    "question": "Cho ánh xạ tuyến tính f: R³ → R³ có ma trận A cấp 3x3 với det(A) = 0. Kết luận nào ĐÚNG?",
+    "options": [
+      "A. Ker(f) chứa các vectơ khác 0 (dim Ker f ≥ 1)",
+      "B. f là một đẳng cấu",
+      "C. f là đơn ánh",
+      "D. Im(f) = R³"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Khi det(A) = 0, hệ AX = 0 có nghiệm phi tầm thường, nghĩa là tồn tại x ≠ 0 thuộc Ker(f) => dim(Ker f) ≥ 1."
+  }
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu hỏi ôn tập</title>
+    <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+    <header>
+        <h1>ÔN TẬP TRẮC NGHIỆM</h1>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle-btn" title="Đổi giao diện Sáng/Tối">🌙</button>
+            <a href="index.html" class="back-btn">&#8592; Trang chủ</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Thanh Thống kê & Chấm điểm -->
+        <div class="quiz-dashboard">
+            <div class="quiz-dashboard-top">
+                <h2>✏️ Luyện Tập Trắc Nghiệm</h2>
+                <div class="score-board">
+                    <span>📌 Đã làm: <strong id="stat-progress">0/0</strong></span>
+                    <span>✅ Đúng: <strong id="stat-correct" style="color: #4ade80;">0</strong></span>
+                    <span>❌ Sai: <strong id="stat-wrong" style="color: #f87171;">0</strong></span>
+                    <span>🎯 Tỉ lệ: <strong id="stat-percent">0%</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bộ lọc theo Chương -->
+        <div id="filter-container" class="filter-bar">
+            <!-- Nút lọc sẽ tự động hiển thị tại đây -->
+        </div>
+
+        <!-- Công cụ Trộn đề -->
+        <div class="action-tools">
+            <button id="shuffle-btn" class="shuffle-btn">🔀 Trộn đề ngẫu nhiên</button>
+        </div>
+
+        <!-- Danh sách câu hỏi -->
+        <div id="quiz-container">
+            <!-- Dữ liệu từ JSON sẽ nạp tự động vào đây -->
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
